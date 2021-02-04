@@ -1,0 +1,22 @@
+h1 Ticket#new
+
+= form_with model: @ticket do |form|
+  div
+    = form.label :description
+    = form.text_field :description
+
+  div
+    = form.label :pr_url
+    = form.text_field :pr_url
+
+  div
+    = form.label :ticket_url
+    = form.text_field :ticket_url
+  
+  div
+    = form.label :status
+    = form.text_field :status
+
+  div
+    = form.label :notes
+    = form.text_field :notes
