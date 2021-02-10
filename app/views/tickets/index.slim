@@ -1,3 +1,14 @@
+= link_to "New Ticket", new_ticket_path
+
 - @tickets.each do |ticket|
-  div 
-    = ticket
+  div
+    h1
+      = ticket.description
+    h1
+      = ticket.status
+    h1
+      = ticket.pr_url
+    h1 
+      = ticket.ticket_url
+    h1
+      = ticket.notes
