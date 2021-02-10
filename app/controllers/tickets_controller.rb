@@ -5,6 +5,10 @@ class TicketsController < ApplicationController
 
   def create
     @ticket = Ticket.new(ticket_params)
+
+    if @ticket.save!
+      redirect_to tickets_path
+    end
   end
 
   def index
