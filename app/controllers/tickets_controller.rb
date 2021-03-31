@@ -6,8 +6,13 @@ class TicketsController < ApplicationController
   def create
     @ticket = Ticket.new(ticket_params)
 
-    if @ticket.save!
+    if @ticket.valid?
+      @ticket.save!
+      flash[:notice] = "New ticket saved sucessfully"
       redirect_to tickets_path
+    else
+      flash.now[:error] = "Could not save ticket: #{@ticket.errors.messages}"
+      render action: "new"
     end
   end
 
