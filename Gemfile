@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 # Use slim as the HTML prepaser
 gem 'slim', '~> 4.1.0'
+# Bootstrap as a styling framwork
+gem 'bootstrap', '~> 5.0.1'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
