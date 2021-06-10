@@ -1,14 +1,14 @@
-= link_to "New Ticket", new_ticket_path
+.container
+  = link_to "New Ticket", new_ticket_path
 
-- @tickets.each do |ticket|
-  div
-    h1
-      = ticket.description
-    h1
-      = ticket.status
-    h1
-      = ticket.pr_url
-    h1 
-      = ticket.ticket_url
-    h1
-      = ticket.notes
+  - @tickets.each do |ticket|
+    .card
+      .card-body
+        .card-title
+          = ticket.description
+        .card-text
+          ul
+            li= ticket.status
+            li= ticket.pr_url
+            li= ticket.ticket_url
+            li= ticket.notes
