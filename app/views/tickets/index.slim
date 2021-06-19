@@ -5,10 +5,10 @@
     .card
       .card-body
         .card-title
-          = ticket.description
+          h4= ticket.description
         .card-text
-          ul
-            li= ticket.status
-            li= ticket.pr_url
-            li= ticket.ticket_url
-            li= ticket.notes
+          ul.list-group
+            li.list-group-item= "Status: #{ticket.status}"
+            li.list-group-item= "PR:     #{ticket.pr_url}"
+            li.list-group-item= "Ticket: #{ticket.ticket_url}"
+            li.list-group-item= "Update: #{ticket.notes}"

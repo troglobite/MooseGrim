@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.7'
 # Frontend technologies
 gem 'slim', '~> 4.1.0'
 gem 'bootstrap', '~> 5.0.1'
+gem 'bootstrap-icons', '~> 1.0', '>= 1.0.10'
 gem 'sass', '~> 3.4', '>= 3.4.22'
 
 # Use Active Storage variant
