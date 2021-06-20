@@ -15,5 +15,5 @@ class Ticket < ApplicationRecord
     'returned_to_developement',
     'ready_for_deploy',
     'deployed'
-  ]
+].freeze
 end
