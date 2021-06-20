@@ -1,14 +1,16 @@
-= link_to "New Ticket", new_ticket_path
+.container
+  h1
+    = link_to(new_ticket_path) do
+      i.bi.bi-plus-circle
 
-- @tickets.each do |ticket|
-  div
-    h1
-      = ticket.description
-    h1
-      = ticket.status
-    h1
-      = ticket.pr_url
-    h1 
-      = ticket.ticket_url
-    h1
-      = ticket.notes
+  - @tickets.each do |ticket|
+    .card
+      .card-body
+        .card-title
+          h4= ticket.description
+        .card-text
+          ul.list-group
+            li.list-group-item= "Status: #{ticket.status}"
+            li.list-group-item= "PR:     #{ticket.pr_url}"
+            li.list-group-item= "Ticket: #{ticket.ticket_url}"
+            li.list-group-item= "Update: #{ticket.notes}"
