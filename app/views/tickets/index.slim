@@ -1,5 +1,7 @@
 .container
-  = link_to "New Ticket", new_ticket_path
+  h1
+    = link_to(new_ticket_path) do
+      i.bi.bi-plus-circle
 
   - @tickets.each do |ticket|
     .card
