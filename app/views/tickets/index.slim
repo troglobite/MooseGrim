@@ -1,7 +1,12 @@
 .container
   h1
-    = link_to(new_ticket_path) do
-      i.bi.bi-plus-circle
+    / = link_to(new_ticket_path) do
+    /   i.bi.bi-plus-circle#new-ticket-button
+    = link_to("#") do
+      i.bi.bi-plus-circle#new-ticket-button
+
+  .new-ticket-form
+    = render partial: "new", locales: @tickets
 
   - @tickets.each do |ticket|
     .card
@@ -14,3 +19,5 @@
             li.list-group-item= "PR:     #{ticket.pr_url}"
             li.list-group-item= "Ticket: #{ticket.ticket_url}"
             li.list-group-item= "Update: #{ticket.notes}"
+
+= javascript_pack_tag 'tickets_index'

@@ -1,0 +1,6 @@
+.container
+  h3= "New Ticket"
+  
+  / .input-group
+  /   span.input-group-text#url-label= "Ticket"
+  /   = text_field_tag[class="form-control" id="ticket-url"]

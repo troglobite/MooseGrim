@@ -17,6 +17,7 @@ class TicketsController < ApplicationController
   end
 
   def index
+    @ticket = Ticket.new
     @tickets = Ticket.all
   end
 
