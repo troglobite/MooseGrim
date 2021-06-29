@@ -3,8 +3,6 @@
 
   form
     .form-group
-      = text_field_tag :status_field, nil, placeholder: "Status", class: "form-control-lg"
-      br
       = text_field_tag :pr_url_field, nil, placeholder: "PR URL", class: "form-control-lg"
       br
       = text_field_tag :ticket_url_field, nil, placeholder: "Ticket URL", class: "form-control-lg"
@@ -12,3 +10,5 @@
       = text_field_tag :status_field, nil, placeholder: "Status", class: "form-control-lg"
       br
       = text_field_tag :notes_field, nil, placeholder: "Notes", class: "form-control-lg"
+      br
+      button.new-ticket-submit.btn.btn-primary[type="aubmit"]= "Submit"

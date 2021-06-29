@@ -4,6 +4,7 @@ class TicketsController < ApplicationController
   end
 
   def create
+    binding.pry
     @ticket = Ticket.new(ticket_params)
 
     if @ticket.valid?
