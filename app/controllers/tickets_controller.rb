@@ -4,7 +4,6 @@ class TicketsController < ApplicationController
   end
 
   def create
-    byebug
     @ticket = Ticket.new(ticket_params)
 
     if @ticket.valid?
@@ -12,13 +11,11 @@ class TicketsController < ApplicationController
       flash[:notice] = "New ticket saved sucessfully"
       redirect_to tickets_path
     else
-      flash.now[:error] = "Could not save ticket: #{@ticket.errors.messages}"
-      render action: "new"
+      render json: { errors: @ticket.errors.messages, status: :internal_server_error }
     end
   end
 
   def index
-    @ticket = Ticket.new
     @tickets = Ticket.all
   end
 
