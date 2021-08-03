@@ -13,5 +13,6 @@ consumer.subscriptions.create("TicketChannel", {
   received(data) {
     // Called when there's incoming data on the websocket for this channel
     tickets = document.querySelector('.tickets');
+    tickets.append(data.message);
   }
 });

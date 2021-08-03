@@ -11,7 +11,8 @@ class TicketsController < ApplicationController
       flash[:notice] = "New ticket saved sucessfully"
       redirect_to tickets_path
     else
-      render json: { errors: @ticket.errors.messages, status: :internal_server_error }
+      byebug
+      render json: { success: false, errors: @ticket.errors.messages}, status: :internal_server_error
     end
   end
 
