@@ -26,6 +26,7 @@ function submitForm(event) {
     body: JSON.stringify(data)
   }
   fetch(event.target.dataset.ticketsUrl, requestBody)
+    .then(json => JSON.parse(json))
     .then(response => handleSuccess(response))
     .catch(error => handleError(error))
 }
