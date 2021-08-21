@@ -1,4 +1,4 @@
-.container 
+.container
   h1 New Ticket
 
   form
@@ -6,6 +6,8 @@
       = text_field_tag :pr_url_field, nil, placeholder: "PR URL", class: "form-control-lg"
       br
       = text_field_tag :ticket_url_field, nil, placeholder: "Ticket URL", class: "form-control-lg"
+      br
+      = text_field_tag :description_field, nil, placeholder: "Description", class: "form-control-lg"
       br
       = text_field_tag :status_field, nil, placeholder: "Status", class: "form-control-lg"
       br

@@ -1,4 +1,4 @@
-import consumer from "./consumer"
+import consumer from "./consumer";
 
 consumer.subscriptions.create("TicketChannel", {
   connected() {
@@ -12,7 +12,9 @@ consumer.subscriptions.create("TicketChannel", {
 
   received(data) {
     // Called when there's incoming data on the websocket for this channel
-    tickets = document.querySelector('.tickets');
+    tickets = document.querySelector(".tickets");
     tickets.append(data.message);
-  }
+  },
+
+  newTicket() {},
 });
