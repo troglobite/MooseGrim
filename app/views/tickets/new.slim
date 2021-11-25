@@ -1,0 +1,20 @@
+.container
+  h1 New Ticket
+  
+  = bootstrap_form_with model: @ticket, html: { class: "form-group" } do |form|
+    / = form.label :description, class: "form-control-l" 
+    = form.text_field :descrpition, class: "form-control-l"
+    br
+    / = form.label :status, class: "form-control-l"
+    = form.text_field :status, class: "form-control-l" 
+    br
+    / = form.label :ticket_url, class: "form-control-l"
+    = form.text_field :ticket_url, class: "form-control-l"
+    br
+    / = form.label :pr_url, class: "form-control-l"
+    = form.text_field :pr_url, class: "form-control-l"
+    br
+    / = form.label :notes, class: "form-control-l"
+    = form.text_field :notes, class: "form-control-l"
+    br
+    = form.submit class: "btn.btn-primary"

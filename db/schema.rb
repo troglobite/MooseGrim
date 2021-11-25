@@ -12,9 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2021_01_28_035541) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "tickets", force: :cascade do |t|
     t.text "description"
     t.string "pr_url"

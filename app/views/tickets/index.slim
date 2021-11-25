@@ -1,12 +1,15 @@
 .container
   h1
-    / = link_to(new_ticket_path) do
-    /   i.bi.bi-plus-circle#new-ticket-button
-    = link_to("#") do
-      i.bi.bi-plus-circle#new-ticket-button
+    = link_to("New Ticket", new_ticket_path)
 
-  .new-ticket-form
-    = render partial: "new", locales: @tickets
+    / TODO: get the new page rendering in a modal
+    / .url[data-tickets-url=new_ticket_path]
+    / = link_to new_ticket_path do
+    /   i.bi.bi-plus-circle#new-ticket-button
+
+
+  / .new-ticket-form
+  /   = render partial: "new", locales: @tickets
 
   .tickets
     - @tickets.each do |ticket|

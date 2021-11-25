@@ -1,6 +1,11 @@
 class TicketsController < ApplicationController
   def new
     @ticket = Ticket.new
+
+    respond_to do |format|
+      format.js { render :new }
+      format.html { render :new}
+    end
   end
 
   def create

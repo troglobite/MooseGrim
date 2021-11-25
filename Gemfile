@@ -6,8 +6,8 @@ ruby '2.7.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1', '>= 6.1.3.1'
 # Use sqlite3 as the database for Active Record
-# gem 'sqlite3', '~> 1.4'
-gem 'pg'
+gem 'sqlite3', '~> 1.4'
+# gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 5.5'
 # Use SCSS for stylesheets
@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'slim', '~> 4.1.0'
 gem 'bootstrap', '~> 5.0.1'
 gem 'bootstrap-icons', '~> 1.0', '>= 1.0.10'
+gem "bootstrap_form", "~> 5.0"
 gem 'sass', '~> 3.4', '>= 3.4.22'
 
 # Use Active Storage variant
@@ -42,6 +43,7 @@ group :development, :test do
   gem 'rspec-expectations', '>= 3.10.1'
   gem 'rspec-mocks', '>= 3.10.1'
   gem 'rspec-support', '>= 3.10.1'
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :development do
