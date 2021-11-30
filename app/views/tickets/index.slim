@@ -2,15 +2,6 @@
   h1
     = link_to("New Ticket", new_ticket_path)
 
-    / TODO: get the new page rendering in a modal
-    / .url[data-tickets-url=new_ticket_path]
-    / = link_to new_ticket_path do
-    /   i.bi.bi-plus-circle#new-ticket-button
-
-
-  / .new-ticket-form
-  /   = render partial: "new", locales: @tickets
-
   .tickets
     - @tickets.each do |ticket|
       .card
@@ -23,5 +14,3 @@
               li.list-group-item= "PR:     #{ticket.pr_url}"
               li.list-group-item= "Ticket: #{ticket.ticket_url}"
               li.list-group-item= "Update: #{ticket.notes}"
-
-= javascript_pack_tag 'tickets_index'
