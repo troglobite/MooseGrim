@@ -1,0 +1,8 @@
+.container
+  h1 New Update
+
+  = bootstrap_form_with url: ticket_logs_path(ticket_id: @ticket.id), method: :post, html: { class: "form-group" } do |form|
+    = form.text_area :description, class: "form-control-l"
+    br
+    = form.submit class: "btn.btn-primary"
+    = link_to "Cancel", tickets_path

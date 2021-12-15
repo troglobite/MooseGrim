@@ -1,0 +1,12 @@
+.tickets
+  .card
+    .card-body
+      .card-title
+        h4= @ticket.description
+      .card-text
+        ul.list-group
+          li.list-group-item= "Status: #{@ticket.status}"
+          li.list-group-item= "PR:     #{@ticket.pr_url}"
+          li.list-group-item= "Ticket: #{@ticket.ticket_url}"
+          li.list-group-item= "Update: #{@ticket.notes}"
+  = link_to "Back", tickets_path

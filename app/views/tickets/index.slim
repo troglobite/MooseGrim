@@ -7,10 +7,5 @@
       .card
         .card-body
           .card-title
-            h4= ticket.description
-          .card-text
-            ul.list-group
-              li.list-group-item= "Status: #{ticket.status}"
-              li.list-group-item= "PR:     #{ticket.pr_url}"
-              li.list-group-item= "Ticket: #{ticket.ticket_url}"
-              li.list-group-item= "Update: #{ticket.notes}"
+            h4= link_to(ticket.description, ticket_path(ticket.id))
+            = link_to("New Update", new_ticket_log_path(ticket_id: ticket.id))
