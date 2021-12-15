@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_28_035541) do
+ActiveRecord::Schema.define(version: 2021_12_08_043435) do
+
+  create_table "logs", force: :cascade do |t|
+    t.integer "ticket_id"
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["ticket_id"], name: "index_logs_on_ticket_id"
+  end
 
   create_table "tickets", force: :cascade do |t|
     t.text "description"
@@ -22,4 +30,5 @@ ActiveRecord::Schema.define(version: 2021_01_28_035541) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "logs", "tickets"
 end
