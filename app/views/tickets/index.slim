@@ -6,6 +6,10 @@
     - @tickets.each do |ticket|
       .card
         .card-body
-          .card-title
+          .card-header
             h4= link_to(ticket.description, ticket_path(ticket.id))
+          .card-title
+            = ticket.updated_at.to_date 
+          .card-body
+            p= ticket.logs.map(&:description).join(". ")
             = link_to("New Update", new_ticket_log_path(ticket_id: ticket.id))
