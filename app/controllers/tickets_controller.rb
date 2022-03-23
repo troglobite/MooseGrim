@@ -21,7 +21,7 @@ class TicketsController < ApplicationController
   end
 
   def show
-    @ticket = Ticket.find(params[:id])
+    @ticket = TicketsDecorator.new(Ticket.find(params[:id]))
   end
 
   def index

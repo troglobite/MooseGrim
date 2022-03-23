@@ -11,5 +11,8 @@
           .card-title
             = ticket.updated_at.to_date 
           .card-body
-            p= ticket.logs.map(&:description).join(". ")
+            - logs = ticket.logs.map(&:description)
+            - logs.each do |log|
+              p= log
             = link_to("New Update", new_ticket_log_path(ticket_id: ticket.id))
+
