@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'journal/index'
   root 'tickets#index'
 
   resources :tickets do
