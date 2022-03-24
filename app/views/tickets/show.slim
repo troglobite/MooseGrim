@@ -9,4 +9,9 @@
           li.list-group-item= "PR:     #{@ticket.pr_url}"
           li.list-group-item= "Ticket: #{@ticket.ticket_url}"
           li.list-group-item= "Update: #{@ticket.notes}"
+      .card-footer
+        h5= "Logs"
+        ul.list-group
+          - @ticket.logs.each do |log|
+            li.list-group-item= log
   = link_to "Back", tickets_path

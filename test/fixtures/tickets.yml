@@ -6,6 +6,7 @@ valid:
   ticket_url: MyString
   status: MyString
   notes: MyText
+  logs: first, second
 
 invalid:
   description: 

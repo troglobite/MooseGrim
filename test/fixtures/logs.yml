@@ -1,0 +1,9 @@
+first:
+  id: 1
+  ticket_id: 1
+  description: "Test Logs 1"
+
+second:
+  id: 2
+  ticket_id: 1
+  description: "Test Logs 2"
